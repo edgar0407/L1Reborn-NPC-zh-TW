@@ -1,0 +1,4 @@
+# 防止 Git 自動轉換 HTML 檔案的編碼和換行符號（ANSI 編碼）
+*.html binary
+*.HTML binary
+*.htm binary
