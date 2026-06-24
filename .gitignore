@@ -1,0 +1,14 @@
+# 內部暫存檔
+file.txt
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# 編輯器
+*.swp
+*~
