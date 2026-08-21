@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-08-22　修復扭曲的空間（entgate）壞掉的對話檔
+
+- `entgate-e.html`：原檔 HTML 結構壞掉（`<html>`/`<body>` 標籤被錯放進按鈕文字裡，`action="1"` 重複、連結對不上文字），依英文原文與內容幾乎相同的 `entgate2-e.html` 重新翻譯修正
+- 檢查同系列 `entgate2-e.html`、`entgate3-e.html` 與英文原文比對，內容意譯但語意正確，未發現結構性問題
+
 ## 2026-08-21　鍊金術師移除斷鏈
 
 - `alchemy1-e.html`：移除「萃取黑色血痕」(`link="alchemy26"`) 連結，該頁面在整個專案中從未存在（含 RefrenceOnly 各版本），點了沒有內容，屬於既有斷鏈
