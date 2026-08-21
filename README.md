@@ -22,7 +22,7 @@
 
 ### 怎麼下載
 
-repo 首頁綠色「**Code**」按鈕 →「**Download ZIP**」，整包下載後解壓，裡面就有 `text/`、`Recent/` 兩個資料夾，依上面表格取你要的那個資料夾使用即可（不用把整包內容都丟進遊戲）。
+進到 repo 首頁 [github.com/edgar0407/L1Reborn-NPC-zh-TW](https://github.com/edgar0407/L1Reborn-NPC-zh-TW)，點綠色「**Code**」按鈕 →「**Download ZIP**」，整包下載後解壓，裡面就有 `text/`、`Recent/` 兩個資料夾，依上面表格取你要的那個資料夾使用即可（不用把整包內容都丟進遊戲）。
 
 熟悉 git 的話也可以直接 clone：
 ```
