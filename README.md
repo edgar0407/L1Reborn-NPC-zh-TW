@@ -20,13 +20,15 @@
 
 `Recent/` 裡的 [`CHANGELOG.md`](./Recent/CHANGELOG.md) 會列出最近改了哪些檔案、做了什麼，可以先看那份說明再決定要不要更新。
 
-### 下載單一資料夾（不用整個 repo）
+### 怎麼下載
 
-GitHub 網頁上，進到 `text/` 或 `Recent/` 資料夾頁面，點右上角「**...**」（更多選項）→「**Download directory**」，就會下載該資料夾打包好的 zip，不用整個 repo 一起抓。
+repo 首頁綠色「**Code**」按鈕 →「**Download ZIP**」，整包下載後解壓，裡面就有 `text/`、`Recent/` 兩個資料夾，依上面表格取你要的那個資料夾使用即可（不用把整包內容都丟進遊戲）。
 
-> 如果你的 GitHub 介面沒有這個選項（帳號/瀏覽器版本較舊），可以改用：
-> - 整包 clone：`git clone https://github.com/edgar0407/L1Reborn-NPC-zh-TW.git`，再自己進 `trunk/text/` 或 `trunk/Recent/` 拿需要的部分
-> - 或搜尋「GitHub 下載單一資料夾」相關的第三方小工具
+熟悉 git 的話也可以直接 clone：
+```
+git clone https://github.com/edgar0407/L1Reborn-NPC-zh-TW.git
+```
+clone 下來的資料夾裡就直接是 `text/`、`Recent/`（repo 根目錄本身就是這裡說的內容，不會再多一層 `trunk/`）。
 
 ### 套用至遊戲
 
@@ -53,7 +55,7 @@ Reborn 伺服器的遊玩環境以英文為主（`-e.html`），
 ## 目錄結構
 
 ```
-trunk/
+（repo 根目錄）
 ├── text/              ← 完整版，所有 NPC 對話檔（隨時可直接覆蓋進遊戲）
 ├── Recent/            ← 近期更新的檔案（只是 text/ 同名檔案的副本，方便瀏覽/單獨下載最新變動）
 │   └── CHANGELOG.md   ← 近期更新的文字說明
