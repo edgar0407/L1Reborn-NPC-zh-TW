@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-08-28　escapefi1 補上逃離遺忘之島捷徑連結
+
+- `escapefi1-e.html`：把 `escapefi2-e.html` 的「逃離遺忘之島」連結（`action="teleport escape-forgotten-island"`）複製 3 行放到頁面最上方
+- 順手修正原檔裡的編碼亂碼：「我是因為被懲罰所以才在這堙v→「我是因為被懲罰所以才在這裡」、「我要在這堿搧蛣L數的冒險家」→「我要在這裡看著無數的冒險家」
+
 ## 2026-08-28　rrafons 兌換頁改版：清單移到最上方 + 物品名稱對齊官方譯名
 
 - `rrafons7-e.html` / `rrafons8-e.html` / `rrafons12-e.html` / `rrafons13-e.html`：
