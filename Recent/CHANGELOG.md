@@ -5,6 +5,13 @@
 
 ---
 
+## 2026-08-28　fihm-e.html 用詞調整、比照 toihm/fvhm 風格
+
+- 標題與內文「被遺忘之島」統一改成「遺忘之島」（含標題、選單說明、頁尾限制說明）
+- 列名比照 fvhm/dvchm 用詞：「狀態」→「挑戰狀態」、「關閉清除」→「停用挑戰」
+- 比對英文原文（`Difficulty, EXP, and drops increase per tier.`），確認現有「難度、經驗值與掉落率均會提升」已完整涵蓋，未提及傷害倍率，故未新增（fvhm/dvchm 的傷害/經驗/掉落分項數值是它們自己才有的內容，fihm 英文原文沒有對應資訊，不硬套）
+- 品項名稱變動後重新計算對齊寬度
+
 ## 2026-08-28　escapefi1 補上逃離遺忘之島捷徑連結
 
 - `escapefi1-e.html`：把 `escapefi2-e.html` 的「逃離遺忘之島」連結（`action="teleport escape-forgotten-island"`）複製 3 行放到頁面最上方
