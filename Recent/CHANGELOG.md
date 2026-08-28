@@ -5,6 +5,12 @@
 
 ---
 
+## 2026-08-28　sktztele2 傳送連結搬到 sktztele 最上方
+
+- `sktztele2-e.html`：翻譯（原本未翻譯，天堂競技場傳送確認頁）
+- `sktztele-e.html`：把 `sktztele2` 的實際傳送連結（`action="teleport arcade"`）複製一份放到頁面最上方，原本頁面下方的內容不變
+- 發現 `glt`/`ort`/`skt` 三個商店村傳送員其實都各自還有 `XXXtele1`（傳送至商店村確認頁）、`XXXtele2`（傳送至天堂競技場確認頁）兩個子頁，`sktzteleC`（拒絕進入的理由頁）已經翻好了，`sktztele1`、`gltztele1/2`、`ortztele1/2` 目前都還沒翻，先記錄，等使用者確認是否要一併處理
+
 ## 2026-08-28　翻譯 3 個商店村傳送員（glt/ort/skt）
 
 - `gltztele-e.html`（古魯丁）、`ortztele-e.html`（歐瑞）、`sktztele-e.html`（銀騎士之村）：
