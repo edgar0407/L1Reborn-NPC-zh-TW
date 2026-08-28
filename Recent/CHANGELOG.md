@@ -5,6 +5,13 @@
 
 ---
 
+## 2026-08-28　補完 glt/ort/skt 商店村傳送員全部子頁
+
+- 翻譯：`gltztele2-e.html`、`ortztele1-e.html`、`ortztele2-e.html`、`sktztele1-e.html`（原本都未翻譯）
+- `gltztele-e.html`、`ortztele-e.html`：頂部各加上 2 行捷徑（傳送至該村商店村、傳送到天堂競技場），比照 sktztele 的做法
+- `sktztele-e.html`：補上 `sktztele1` 的捷徑（傳送至商店村），現在跟商店村/天堂競技場兩個捷徑都在最上方了
+- 至此 glt/ort/skt 三個商店村傳送員系列（tele/tele1/tele2/teleC）全部翻譯完成
+
 ## 2026-08-28　sktztele2 傳送連結搬到 sktztele 最上方
 
 - `sktztele2-e.html`：翻譯（原本未翻譯，天堂競技場傳送確認頁）
