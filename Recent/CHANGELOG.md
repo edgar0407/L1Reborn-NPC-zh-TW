@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-08-28　商店村傳送捷徑改成 3 行 + 空行分隔
+
+- `gltztele-e.html`、`ortztele-e.html`、`sktztele-e.html`：最上方「傳送至商店村」捷徑連結改成連續 3 行，
+  後面加 2 個空行再接「傳送到天堂競技場」捷徑
+
 ## 2026-08-28　補完 glt/ort/skt 商店村傳送員全部子頁
 
 - 翻譯：`gltztele2-e.html`、`ortztele1-e.html`、`ortztele2-e.html`、`sktztele1-e.html`（原本都未翻譯）
