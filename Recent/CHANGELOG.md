@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-08-31　倉庫管理員系列補上遺漏的可見 bug 修復
+
+- 用 `action="deposit"` 全庫搜尋倉庫管理員頁面（共 35 個，跟 08-19 那次 Customization/Storage 整理時一致，沒有新增或遺漏），
+  確認除了以下 3 個，其餘都沒有明顯結構問題
+- `rayearth1-e.html`（倉庫管理員瑞絲）、`tigus-e.html`、`zidar-e.html`：先前只在
+  `Customization/Storage/` 草案裡修好，正式 `trunk/text/` 一直沒有套用，這次補上：
+  AI 翻譯標記從明文「烏薩奇說: AI英翻中」改回 HTML 註解、拿掉會顯示出來的英文原文對照段落、
+  修正 `rayearth1`（`pgotham`→`prayearth`）與 `tigus`/`zidar`（`pgawl`→各自的 `ptigus`/`pzidar`）血盟倉庫連結指錯的問題
+- 順便發現全庫還有 22 個檔案（`belgeter2`、`egggs`、`helpgen` 等一批 help 系列、`herbert1`、
+  `kriomwp`、`pig1`、`seghem1`、`stra1`、`telecdwarf2` 等傳送點系列、`zeno`/`zeno2`、`fraoun5`）
+  也有同樣的「明文 AI 標記」問題，不在這次倉庫範圍內，先記錄，等使用者確認是否要一併處理
+
 ## 2026-08-28　rrafons 改版、entgate 同類修復延伸、傳送員系列翻譯、webstore 潤飾
 
 **rrafons 兌換頁改版**
