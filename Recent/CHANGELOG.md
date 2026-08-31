@@ -5,13 +5,13 @@
 
 ---
 
-## 2026-08-31　egggs-e.html 用詞對齊官方「營養滿分」譯名
+## 2026-08-31　eggg1~3、egggs 補上官方譯名的「金」字
 
-- `egggs-e.html`：`充滿養分的護身符/戒指/腰帶` → `營養滿分的護身符/戒指/腰帶`，跟 `mapping/real-desc.tsv`
-  已收錄的官方譯名（`Amulet/Ring/Belt Full of Nutrients` → `營養滿分金項鍊/金戒指/金腰帶`）與既有
-  `eggg1~3-e.html` 用詞一致
-  - 官方完整譯名其實還多一個「金」字（營養滿分**金**項鍊），但 `eggg1~3-e.html` 現有翻譯都沒有這個
-    「金」字，這次先只對齊「營養滿分」這個詞，維持跟 eggg1~3 一致，「金」字要不要一併補上待使用者確認
+- `eggg1-e.html`、`eggg2-e.html`、`eggg3-e.html`、`egggs-e.html`：`營養滿分項鍊/戒指/腰帶` 全部改成
+  `營養滿分金項鍊/金戒指/金腰帶`，完整對齊 `mapping/real-desc.tsv` 收錄的官方譯名
+  （`Amulet/Ring/Belt Full of Nutrients` → `營養滿分金項鍊/金戒指/金腰帶`）
+- `egggs-e.html` 的「護身符」跟 eggg1~3 的「項鍊」用詞不同（同一個 Amulet 概念，官方譯名是「項鍊」），
+  這次沒有動，先記錄待確認要不要一併統一
 
 ## 2026-08-31　倉庫管理員系列補上遺漏的可見 bug 修復
 
