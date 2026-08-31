@@ -10,8 +10,7 @@
 - `eggg1-e.html`、`eggg2-e.html`、`eggg3-e.html`、`egggs-e.html`：`營養滿分項鍊/戒指/腰帶` 全部改成
   `營養滿分金項鍊/金戒指/金腰帶`，完整對齊 `mapping/real-desc.tsv` 收錄的官方譯名
   （`Amulet/Ring/Belt Full of Nutrients` → `營養滿分金項鍊/金戒指/金腰帶`）
-- `egggs-e.html` 的「護身符」跟 eggg1~3 的「項鍊」用詞不同（同一個 Amulet 概念，官方譯名是「項鍊」），
-  這次沒有動，先記錄待確認要不要一併統一
+- `egggs-e.html` 的「護身符」也統一改成「項鍊」，跟 eggg1~3 與官方譯名一致
 
 ## 2026-08-31　倉庫管理員系列補上遺漏的可見 bug 修復
 
