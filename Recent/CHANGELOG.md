@@ -13,9 +13,23 @@
   `Customization/Storage/` 草案裡修好，正式 `trunk/text/` 一直沒有套用，這次補上：
   AI 翻譯標記從明文「烏薩奇說: AI英翻中」改回 HTML 註解、拿掉會顯示出來的英文原文對照段落、
   修正 `rayearth1`（`pgotham`→`prayearth`）與 `tigus`/`zidar`（`pgawl`→各自的 `ptigus`/`pzidar`）血盟倉庫連結指錯的問題
-- 順便發現全庫還有 22 個檔案（`belgeter2`、`egggs`、`helpgen` 等一批 help 系列、`herbert1`、
-  `kriomwp`、`pig1`、`seghem1`、`stra1`、`telecdwarf2` 等傳送點系列、`zeno`/`zeno2`、`fraoun5`）
-  也有同樣的「明文 AI 標記」問題，不在這次倉庫範圍內，先記錄，等使用者確認是否要一併處理
+- 順便發現全庫還有 23 個檔案也有同樣的「明文 AI 標記」問題（下面另開一節記錄修復）
+
+## 2026-08-31　修復另外 23 個「明文 AI 標記」可見 bug 的檔案
+
+跟上面倉庫管理員那 3 個同一種 bug：AI 翻譯標記寫成明文「烏薩奇說: AI英翻中」、結尾常附一段會顯示出來的
+「--- 英文原文 ---」對照段落，玩家在遊戲裡都看得到，不是隱藏註解。全部改回 `<!-- 烏薩奇: AI英翻中 -->`
+HTML 註解並拿掉可見的英文原文段落：
+
+- `belgeter2-e.html`、`egggs-e.html`、`fraoun5-e.HTML`、`pig1-e.html`、`seghem1-e.html`、`stra1-e.html`
+- help 系列：`helpgen-e.html`、`helpitm-e.html`、`helplng-e.html`、`helpmgca/ce/cf/cn/cw-e.html`（精靈法術風/土/火/共同/水系）
+- `helplvup-e.html`：標記本來就註明「無 -k.html 來源，依連結名稱推算」，這個附加說明保留，只是補上 `<!-- -->` 包起來
+- 傳送點系列：`telecdwarf2-e.html`、`telediad2-e.html`、`telegiran2-e.html`、`telesilver2-e.html`
+- `kriomwp-e.html`（倉庫密碼設定說明）、`zeno-e.html`、`zeno2-e.html`
+- `herbert1-e.html`：這個沒有明文標記問題，但發現按鈕連結文字裡混進了翻譯者自己的疑問備註「烏薩奇說:好像是作棉花線」，
+  查證 `herbert6-e.html` 內容後確認就是棉花線沒錯，改成正常按鈕文字「詢問棉花線的事。」
+
+修復後全庫重新掃描「烏薩奇說」明文特徵，確認清空、無遺漏。
 
 ## 2026-08-28　rrafons 改版、entgate 同類修復延伸、傳送員系列翻譯、webstore 潤飾
 
