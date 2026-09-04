@@ -1,146 +1,21 @@
-# 近期更新（2026年8月）
+# 近期更新（2026年9月）
 
 > 本資料夾收錄本月（截至最新更新）所有新增/修改過的檔案，方便只想看「這個月改了什麼」的人瀏覽，不需要重新下載整個 trunk。
 > `trunk/text/` 永遠是完整合併版本，可直接整包覆蓋進遊戲使用；本資料夾內容只是 `text/` 同名檔案的唯讀副本，**不要單獨拿這裡的檔案去覆蓋遊戲**，缺其他未變動的檔案。
 
 ---
 
-## 2026-08-31　官方更新：火龍聖域新內容 + rrafons 新增 x100 兌換
+## 2026-09-04　官方更新：亞丁的冒險改版 + 精靈護手／真‧冥皇武器重鑄 + L4困難模式
 
-- 新增翻譯：`eldnas2-e.html`/`.html`（艾爾納斯，火龍窟入口，60級以上獻上「極寒之氣」進入）、
-  `fd_death-e.html`/`.html`（墮落騎士，需擊敗三隻火龍利歐才能過橋進入聖域）——巴拉卡斯（Valakas）、
-  火龍窟（Fire Valley，沿用 fvhm 既有譯名）官方既有譯名，其餘「極寒之氣」「火龍利歐」「聖域」為本次新譯
-- `rrafons7-e.html` / `rrafons8-e.html` / `rrafons12-e.html` / `rrafons13-e.html`：官方新增「Exchange 100」
-  兌換，比照既有版面在 x1/x10 後面加一欄 x100（橘色 `ff9966`），action 用官方新代碼
-  （`r8a100`~`r8h100` 綜合香辣醬、`r13s100`~`r13z100` 香草），對齊寬度不受影響（x1/x10/x100 都是固定寬度字串）
-
-## 2026-08-31　eggg1~3、egggs 補上官方譯名的「金」字
-
-- `eggg1-e.html`、`eggg2-e.html`、`eggg3-e.html`、`egggs-e.html`：`營養滿分項鍊/戒指/腰帶` 全部改成
-  `營養滿分金項鍊/金戒指/金腰帶`，完整對齊 `mapping/real-desc.tsv` 收錄的官方譯名
-  （`Amulet/Ring/Belt Full of Nutrients` → `營養滿分金項鍊/金戒指/金腰帶`）
-- `egggs-e.html` 的「護身符」也統一改成「項鍊」，跟 eggg1~3 與官方譯名一致
-
-## 2026-08-31　倉庫管理員系列補上遺漏的可見 bug 修復
-
-- 用 `action="deposit"` 全庫搜尋倉庫管理員頁面（共 35 個，跟 08-19 那次 Customization/Storage 整理時一致，沒有新增或遺漏），
-  確認除了以下 3 個，其餘都沒有明顯結構問題
-- `rayearth1-e.html`（倉庫管理員瑞絲）、`tigus-e.html`、`zidar-e.html`：先前只在
-  `Customization/Storage/` 草案裡修好，正式 `trunk/text/` 一直沒有套用，這次補上：
-  AI 翻譯標記從明文「烏薩奇說: AI英翻中」改回 HTML 註解、拿掉會顯示出來的英文原文對照段落、
-  修正 `rayearth1`（`pgotham`→`prayearth`）與 `tigus`/`zidar`（`pgawl`→各自的 `ptigus`/`pzidar`）血盟倉庫連結指錯的問題
-- 順便發現全庫還有 23 個檔案也有同樣的「明文 AI 標記」問題（下面另開一節記錄修復）
-
-## 2026-08-31　修復另外 23 個「明文 AI 標記」可見 bug 的檔案
-
-跟上面倉庫管理員那 3 個同一種 bug：AI 翻譯標記寫成明文「烏薩奇說: AI英翻中」、結尾常附一段會顯示出來的
-「--- 英文原文 ---」對照段落，玩家在遊戲裡都看得到，不是隱藏註解。全部改回 `<!-- 烏薩奇: AI英翻中 -->`
-HTML 註解並拿掉可見的英文原文段落：
-
-- `belgeter2-e.html`、`egggs-e.html`、`fraoun5-e.HTML`、`pig1-e.html`、`seghem1-e.html`、`stra1-e.html`
-- help 系列：`helpgen-e.html`、`helpitm-e.html`、`helplng-e.html`、`helpmgca/ce/cf/cn/cw-e.html`（精靈法術風/土/火/共同/水系）
-- `helplvup-e.html`：標記本來就註明「無 -k.html 來源，依連結名稱推算」，這個附加說明保留，只是補上 `<!-- -->` 包起來
-- 傳送點系列：`telecdwarf2-e.html`、`telediad2-e.html`、`telegiran2-e.html`、`telesilver2-e.html`
-- `kriomwp-e.html`（倉庫密碼設定說明）、`zeno-e.html`、`zeno2-e.html`
-- `herbert1-e.html`：這個沒有明文標記問題，但發現按鈕連結文字裡混進了翻譯者自己的疑問備註「烏薩奇說:好像是作棉花線」，
-  查證 `herbert6-e.html` 內容後確認就是棉花線沒錯，改成正常按鈕文字「詢問棉花線的事。」
-
-修復後全庫重新掃描「烏薩奇說」明文特徵，確認清空、無遺漏。
-
-## 2026-08-28　rrafons 改版、entgate 同類修復延伸、傳送員系列翻譯、webstore 潤飾
-
-**rrafons 兌換頁改版**
-- `rrafons7-e.html` / `rrafons8-e.html` / `rrafons12-e.html` / `rrafons13-e.html`：版面改成「置中標題 → 兌換清單 → 分隔線 → NPC 開場白」，清單和兌換連結搬到最上方，原本兩頁開場白字數差異造成的換行不會再影響清單起始位置
-- 比對 `mapping/real-desc.tsv` 官方物品譯名，修正 3 個誤譯：
-  - 綜合香辣醬清單：`種子夾心薄餅`→`煎餅`、`糖醋水果`→`水果糖醋肉`、`怪物眼球牛排`→`漂浮之眼肉排`（皆為官方對照表直接收錄的完整料理名）
-  - 香草清單：`龜龍餅乾`→`龍龜餅乾`（原本兩字顛倒，官方怪物名是「龍龜」）、`艾雷卡多姆燉菜`→`伊萊克頓燉菜`、`烤蠍子`→`烤毒蠍`（比照官方怪物譯名「毒蠍」）
-  - 物品名稱變動後，兩份清單的對齊寬度重新計算過
-
-**扭曲的空間系列延伸（entgate 同類壞掉檔案）**
-- `escapefi1-e.html`：把 `escapefi2-e.html` 的「逃離遺忘之島」連結（`action="teleport escape-forgotten-island"`）複製 3 行放到頁面最上方
-- 順手修正原檔裡的編碼亂碼：「我是因為被懲罰所以才在這堙v→「我是因為被懲罰所以才在這裡」、「我要在這堿搧蛣L數的冒險家」→「我要在這裡看著無數的冒險家」
-- `luck1-e.html`：比照同樣做法，把 `luck2-e.html` 的「離開遺忘之島」連結複製 3 行放到頁面最上方
-- `luck1-e.html`（3 處）、`luck2-e.html`（1 處）：連結文字統一從「離開這個遺忘之島。」簡化成「離開遺忘之島」
-
-**fihm/fvhm 遺忘之島／火龍窟困難模式**
-- `fihm-e.html`：標題與內文「被遺忘之島」統一改成「遺忘之島」（含標題、選單說明、頁尾限制說明）
-- 列名比照 fvhm/dvchm 用詞：「狀態」→「挑戰狀態」、「關閉清除」→「停用挑戰」
-- 比對英文原文（`Difficulty, EXP, and drops increase per tier.`），確認現有「難度、經驗值與掉落率均會提升」已完整涵蓋，未提及傷害倍率，故未新增（fvhm/dvchm 的傷害/經驗/掉落分項數值是它們自己才有的內容，fihm 英文原文沒有對應資訊，不硬套）
-- `fihm-e.html` 的「挑戰狀態」「停用挑戰」原本被誤補齊成跟 Tier 清單一樣寬（多補了 10 格空白），改回只跟彼此對齊（比照 toihm 原始寫法，1 個全形空白即可，因為兩個標籤本來就等長）；對齊規則同時更新為「只在同一邏輯分組內比較，不要跨組硬湊同一寬度」
-- `fihm-e.html`、`fvhm-e.html`：Tier 1~3 之間各加一個空行，不要緊貼
-- 品項名稱變動後重新計算對齊寬度
-
-**glt/ort/skt 商店村傳送員系列（全部翻譯完成）**
-- `gltztele-e.html`（古魯丁）、`ortztele-e.html`（歐瑞）、`sktztele-e.html`（銀騎士之村）：原本整份都是未翻譯的英文，比照已翻譯好的 `grtztele-e.html`（奇岩村）用詞風格翻譯
-- 翻譯：`gltztele2-e.html`、`ortztele1-e.html`、`ortztele2-e.html`、`sktztele1-e.html`、`sktztele2-e.html`（原本都未翻譯）；`sktzteleC-e.html` 本來就已翻好
-- `gltztele-e.html`、`ortztele-e.html`、`sktztele-e.html`：最上方各加上「傳送至該村商店村」（連續 3 行）、「傳送到天堂競技場」兩個捷徑連結，後面加 2 個空行分隔
-- 至此 glt/ort/skt 三個商店村傳送員系列（tele/tele1/tele2/teleC）全部翻譯完成
-- 順手確認 `action="teleportURL"` 不是連結到單一檔案，而是全庫近 90 個檔案共用的通用傳送 action，實際目的地由伺服器依觸發的 NPC/場景決定；同系列的 `XXXtzguard-e.html`（商店村警衛，負責反方向「返回OO村」）都已經翻好了，可作為之後類似組合的參考
-
-**webstore-e.html（網頁倉庫）**
-- `帳號共用倉庫` → `帳號共用倉庫(Web Storage)`，標題加註英文原名
-- 開頭說明句改成「這是網站會員名下所有帳號與角色可共同存取的儲存空間。」，取代原本容易誤讀、混用半形「&」的版本
-- 「存放上限依網站帳號贊助等級而定。」補上免費額度「(免費有25個)」，這個數字原本只出現在 `webstoreno-e.html` 裡，現在主頁面也直接看得到
-- 「依類型取出」原本用「.」串接的 6 個分類連結（符文 . 武器 / 材料 . 其他等）改成雙欄對齊格式：符文/武器、防具與飾品/消耗品、材料/其他 各一列，3 列之間各加一個空行
-- `全部取出` → `全部物品`，跟符文/武器/材料/其他等分類標籤統一為名詞式命名，並移到分類清單最上方
-
-## 2026-08-25　修復同批 10 個壞掉/未翻譯的對話檔
-
-比對 entgate 那次發現的損壞模式（`<html>`/`<body>` 標籤被錯放進按鈕文字裡）在全庫掃描，抓出同樣壞掉的另外 8 個檔案，加上 2 個結構壞掉又從未翻譯的檔案：
-
-- `dogfight8-e.html`：修復結構，補回「領取獎金」按鈕文字
-- `doil4b-e.html`：修復結構，移除損壞產生的多餘斷鏈按鈕
-- `eggg2-e.html` / `eggg3-e.html`：修復結構，移除損壞產生的重複/空白按鈕（實際有效選項不變）
-- `eris4-e.html`：修復結構（原本 `<a>` 標籤互相巢狀，不合法 HTML），還原成兩個獨立按鈕
-- `fraoun-e.html`：修復結構，並依英文原文補回遺漏的「武器／盾牌／藥水／食物」品項連結段落
-- `gr_trick1-e.html`：修復結構，補回「前往隱藏地城...」按鈕文字
-- `luudiel1-e.html`：修復結構，補回兩個按鈕文字（正文為既有精簡翻譯，未擴寫）
-- `l_hunt.html` / `u_hunt.html`：這兩個原本完全是英文未翻譯、結構也壞掉，直接同步成已經翻譯正確的 `l_hunt-e.html` / `u_hunt-e.html` 內容
-
-## 2026-08-25　被遺忘之島困難模式補上雙欄對齊
-
-- `fihm-e.html`：08-10 已改成個人/隊伍雙欄格式，但「狀態」「關閉清除」「Tier 1~3」幾個標籤長度不一，沒有補齊對齊；這次比照 rrafons 的對齊規則補上全形空白，讓每一列的個人/隊伍連結對齊同一欄位
-
-## 2026-08-22　修復扭曲的空間（entgate）壞掉的對話檔
-
-- `entgate-e.html`：原檔 HTML 結構壞掉（`<html>`/`<body>` 標籤被錯放進按鈕文字裡，`action="1"` 重複、連結對不上文字），依英文原文與內容幾乎相同的 `entgate2-e.html` 重新翻譯修正
-- 檢查同系列 `entgate2-e.html`、`entgate3-e.html` 與英文原文比對，內容意譯但語意正確，未發現結構性問題
-
-## 2026-08-21　鍊金術師移除斷鏈
-
-- `alchemy1-e.html`：移除「萃取黑色血痕」(`link="alchemy26"`) 連結，該頁面在整個專案中從未存在（含 RefrenceOnly 各版本），點了沒有內容，屬於既有斷鏈
-
-## 2026-08-21　安東新增虛空金屬盔甲選項
-
-- `anton2-e.html` / `anton2.html`：技師安東新增第二項鍛造選項「Craft Void Plate Mail.」，翻譯為「製作虛空金屬盔甲」
-- 比對 Reborn-20260819 官方全量 148 個檔案，145 個與過去快照逐位元組相同（伺服器整包重出既有內容），僅 anton2 這組是真的更新
-
-## 2026-08-19　rrafons 兌換選單改版
-
-- `rrafons7-e.html` / `rrafons8-e.html` / `rrafons12-e.html` / `rrafons13-e.html`：香辣醬／香草兌換清單改為「品項　x1　x10」雙欄格式，全形空白補齊對齊，x1/x10 與品項名稱（綜合香辣醬／香草）加上顏色區分
-- 移除 `goblinprisoner-e`、`goblintreasure1~3(-e)`、`gtreas1~3(-e)` 共 13 個孤兒檔（檔名過長被吃檔工具靜默跳過，內容已被 `gpris`/`gtrs1~3` 取代）
-
-## 2026-08-14　官方更新：巨龍戰利品廳、秘密飛龍傳送門
-
-- 新增巨龍戰利品廳系列對話（`drgha`、`drghdone`、`drgheads`、`drgherr`、`drghf`、`drghl`、`drghneed`、`drghused`、`drghv`）與秘密飛龍傳送門（`dsecret1~3`）
-- 更新符文重鑄師（`runereforge`/`runereforges`）與羅賓孫（`robinscroll`/`robinscroll2`）清單
-
-## 2026-08-10　補漏與選單版面調整
-
-- 補齊漏併入主線的 `dvchm-e.html`（07-10 已翻好但只留在舊 patch 資料夾，未併入根目錄）
-- 新增藥水商 Sasha 對話 `noodle-e.html`、登入畫面歡迎詞 `intro-e.tbl`
-- `bscrolls1~5-e.html` 全形數字改半形，選項間對齊方式統一；`fihm-e.html` 改為個人/隊伍雙欄格式，與 dvchm 等新版選單風格一致
-
-## 2026-08-01　官方更新：多項系統性改版
-
-- 神秘吟遊詩人主選單改版，`bscrolls1~5` 新增 x100 兌換，新增傲慢之塔卷軸升降級功能（`toidown`/`toiscrollup`）
-- 傲慢之塔困難模式（`toihm`）更新王討伐規則說明
-- 鐵匠亞提利歐新增克羅諾斯之懼武器線，海柏利安之絕望移至 `adelio18`
-- 鐵匠皮爾選單改版，新增古代戰士臂甲 `pual8`
-- 新增哥布林王事件全套翻譯（`goblinprisoner`/`gpris`/`goblintreasure`/`gtreas`/`gtrs` 系列，後於 08-19 精簡孤兒檔）
-- 新增歐林之影 NPC 與完整任務線翻譯（`orim1~10`）
-- 新增食人妖精競賽導覽 `bugrace`、自由披風織工 `freedomcloak`、戒指插槽解鎖 `slot6`/`slot7`/`slot9`
-
----
-
-詳細逐檔異動請參閱 git log（`git log --since=2026-08-01`）或 [devlog](../../readme.md)。
+- **亞丁的冒險（Adventures of Aden）改版**：`adventurehub-e.html`、`restoredadventures-e.html`/`.html`（三檔內容相同，新舊入口都指向同一頁）
+  整合為單一冒險選單，收錄水晶洞窟（冰之女王／冰之惡魔）、哈汀的秘辛、歐林海上遠征、守護獨角獸、阿茲莫丹血盟地下城，以及獨立迷你攻城戰報名入口
+- **水晶洞窟**：`cqueen-e.html`/`.html`（冰之女王路線）、`cdemon-e.html`/`.html`（冰之惡魔路線）——1-6人隊伍，限時清除五間冰封密室
+- **歐林海上遠征**（新增party小遊戲，沿用既有「歐林」譯名）：`orimvoyage-e.html`/`.html`（主頁）、`orimattack-e.html`（攻擊符文）、
+  `orimdefense-e.html`（防禦符文）、`orimportal-e.html`（登船符文）、`orimreturnrune-e.html`（歸返符文）、
+  `orimcannonp-e.html`/`.html`（左舷砲台）、`orimcannons-e.html`/`.html`（右舷砲台）、`orimstatus-e.html`（狀態/獎勵查詢）——反派新譯名「歐丁」（Oldin）
+- **精靈護手系統**（叛逃者NPC新增分支，`defecter2-e.html` 補上連結）：`defecter14-e.html`（總覽）、`defecter15-e.html`（力量）、
+  `defecter16-e.html`（精準）、`defecter17-e.html`（洞察）——消耗+7精靈手套（冰/暗/火/風四元素之一）與對應+7手套（反王肯恩／死亡騎士／賽尼斯）精煉成60級精靈護手
+- **真‧冥皇武器重鑄**（新NPC，沿用既有「真‧冥皇」譯名系列）：`fidref1-e.html`（總覽）、`fidref02`~`fidref09-e.html`（風刃短刀／真‧冥皇執行劍／
+  紅影雙刀／聖晶魔杖／野獸王的鋼爪／蓋亞之怒／克羅諾斯之懼／海柏利安的絕望，八款既有黑暗妖精武器可互相重鑄，武器名稱沿用 `adelio2`~`adelio18` 系列既有譯名）
+- **L4困難模式**（新增）：`l4warden-e.html`、`l4wardenc-e.html`——官方原文標題為戲謔式的「L4 FUCK YOU HARD MODE」，中文採委婉但保留自嘲語氣的「L4 找死模式」（使用者確認譯名）
+- `autopot-e.html`：官方改版自動補藥選單，新增「多餘藥水」自動使用功能（使用上限50%~90%可調）與「測試／重新整理」按鈕，「使用時機」等既有翻譯沿用
