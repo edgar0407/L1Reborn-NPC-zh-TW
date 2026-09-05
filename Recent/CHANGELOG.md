@@ -26,3 +26,6 @@
   講述奇岩地下城（Giran Dungeon）曾是監獄、囚犯浮士德（Faust）出賣靈魂、亞丁國王以乙太結界封印該地的背景故事
 - 新譯名：Giran Dungeon→奇岩地下城（沿用既有 Giran=奇岩）、Faust→浮士德、Aetheric Field→乙太結界
 - `autopot-e.html`：使用者校正用詞，標題「自動補藥」→「自動喝水」，「多餘藥水」→「低階藥水」
+- `telephantasm-e.html`：使用者手動於最上方加入3行「前往夢幻之島」捷徑連結，比照 escapefi1/luck1 等既有頁面格式
+- `merlin1-e.html`：比對過 `RefrenceOnly/Justice` 快照後（發現 Justice 版 merlin1 檔案內容與 merlin2 錯置，不可直接沿用），
+  於最上方加入3行 merlin2 的傳送連結（`teleport giranD`／「請將我送往監獄。」）捷徑，比照 telephantasm-e.html 格式
