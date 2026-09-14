@@ -29,3 +29,19 @@
 - `telephantasm-e.html`：使用者手動於最上方加入3行「前往夢幻之島」捷徑連結，比照 escapefi1/luck1 等既有頁面格式
 - `merlin1-e.html`：比對過 `RefrenceOnly/Justice` 快照後（發現 Justice 版 merlin1 檔案內容與 merlin2 錯置，不可直接沿用），
   於最上方加入3行 merlin2 的傳送連結（`teleport giranD`／「請將我送往監獄。」）捷徑，比照 telephantasm-e.html 格式
+
+## 2026-09-14　符文稀有度用詞改回英文 + 網頁倉庫新增分類 + 寶石兌換改版 + 倉庫NPC翻新
+
+- `runegambler.html`/`runegambler-e.html`（符文賭博師）、`runereforge.html`/`runereforge-e.html`（符文重鑄師 維爾）：
+  稀有度名稱由中文改回官方原文，非凡→Uncommon、稀有→Rare、史詩→Epic、傳說→Legendary（「下一稀有度」等泛指用法維持中文不動）
+- `webstore-e.html`（網頁倉庫）：依類型取出新增4個分類（原3行4類→5行10類），新譯名：Dolls→魔法娃娃、Scrolls and Books→卷軸與書籍、
+  Chests and Event→寶箱與活動、Pets and Quest→寵物與任務物品
+- `dio1-e.html`（珠寶商 迪歐，寶石兌換）：新增一段「以稀有度為列」的對照表放最上方，每列可直接點擊升級／降級（紅寶升品紅、
+  品紅升高品紅⋯四色皆同款簡稱），取代原本「藍寶石/高級/最高級」等籠統字樣；原本的圖示升降級連結列移到頁面最下方保留；
+  對照表四色改用正確的顏色（紅寶石系紅色、藍寶石系藍色、綠寶石系綠色）
+- **倉庫管理員類 NPC 翻新**（`nodim-e.html` 諾丁、`rayearth1-e.html`/`prayearth-e.html` 雷亞斯 等）：統一套用新版倉庫頁格式——
+  頂端「個人倉庫：存入　／　領出」「血盟倉庫：存入　／　領出」快速連結、底部補回「確認血盟倉庫使用記錄」；
+  順便修正諾丁血盟倉庫連結誤指到另一個NPC「艾塞隆」頁面的錯誤，改回指向自己的頁面
+- `Customization/Storage/text/` 底下 35 個倉庫管理員 NPC 草稿統一改名為 `*-e.html`（比對確認遊戲實際讀取的是這個檔名），
+  並套用同樣的新版倉庫頁格式間距（全形空白＋全形斜線＋全形空白）
+- `trunk/text/kuhatin-e.HTML` 副檔名大寫的問題已修正為小寫 `kuhatin-e.html`
